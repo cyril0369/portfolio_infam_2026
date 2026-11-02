@@ -1,0 +1,111 @@
+## Dossiers de build
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Ll]og/
+[Ll]ogs/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+
+## Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.rsuser
+
+## Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Résultats de tests et couverture
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+*.lcov
+.coverage/
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+.nuget/
+
+## Fichiers générés
+*.log
+*.tmp
+*.tmp_proj
+*.pdb
+*.cache
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.ionide/
+
+## Publication
+publish/
+PublishScripts/
+*.pubxml
+*.publishproj
+csx/
+*.[Pp]ublish.xml
+
+## ASP.NET Core / Blazor / front
+node_modules/
+wwwroot/dist/
+wwwroot/lib/
+npm-debug.log*
+
+## Entity Framework
+Migrations/*.Designer.cs.bak
+*.mdf
+*.ldf
+*.sdf
+
+## Secrets et configuration locale (important !)
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+secrets.json
+*.env
+.env
+.env.*
+launchSettings.json
+*.pfx
+*.snk
+
+## Docker
+docker-compose.override.yml
+
+## OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Fichiers de métadonnées macOS
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
