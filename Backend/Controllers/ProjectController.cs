@@ -26,4 +26,17 @@ public class ProjectController : ControllerBase
 
         return Ok(projet);
     }
+
+    [HttpGet("{id:int}")]
+    public async Task<ActionResult<Projet>> GetProjet(int id)
+    {
+        var projet = await _db.Projets
+            .AsNoTracking()
+            .FirstOrDefaultAsync(p => p.Id == id);
+
+        if (projet is null)
+            return NotFound();
+
+        return Ok(projet);
+    }
 }
