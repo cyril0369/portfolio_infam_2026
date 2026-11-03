@@ -1,14 +1,29 @@
+using Backend.Data;
+using Backend.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Controllers;
 
 [ApiController]
-[Route("/project")]
+[Route("api/projets")]
 public class ProjectController : ControllerBase
 {
-    [HttpGet]
-    public string GetProject()
+    private readonly AppDbContext _db;
+
+    public ProjectController(AppDbContext db)
     {
-        return "la liste des projet";
+        _db = db;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<List<Projet>>> GetProjets()
+    {
+        var projet = await _db.Projets
+            .AsNoTracking()
+            .OrderBy(p => p.Id)
+            .ToListAsync();
+
+        return Ok(projet);
     }
 }
