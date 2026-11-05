@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Backend.Dtos;
 
-public class ProjetCreateDto
+public class ProjetDto
 {
 
     [Required, MaxLength(200)]
